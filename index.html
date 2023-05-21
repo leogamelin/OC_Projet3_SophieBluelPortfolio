@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="https://kit.fontawesome.com/97b21000c9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- HEADER -->
+<header>
+	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+	<nav>
+		<ul>
+			<li>projets</li>
+			<li>contact</li>
+			<li id="login"><a href="./login.html">login</a></li>
+			<li><a href="#"><img src="./assets/icons/instagram.png" alt="Instagram"></a></li>
+		</ul>
+	</nav>
+</header>
+<!-- MAIN -->
+<main>
+	<!-- Édition : -->
+	<div id="edition" class="display">
+		<i class="edition__icon fa-regular fa-pen-to-square"></i>
+		<div class="edition__class">
+			<p class="edition__text">Mode édition</p>
+			<button class="edition__button">publier les changements</button>
+		</div>
+	</div>
+	<!-- Introduction // Biographie -->
+	<section id="introduction">
+		<div id="introduction__bio">
+			<figure>
+				<img src="./assets/images/sophie-bluel.png" alt="">
+			</figure>
+			<article>
+				<div id="article__modifier" class="display">
+					<i class="fa-regular fa-pen-to-square"></i>
+					<p>modifier</p>
+				</div>
+				<h2>Designer d'espace</h2>
+				<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p>
+				<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+				<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
+			</article>
+		</div>
+		<div id="introduction__modifier" class="display">
+			<i class="fa-regular fa-pen-to-square"></i>
+			<p>modifier</p>
+		</div>
+	</section>
+	<!-- Portfolio : -->
+	<section id="portfolio">
+		<div id="portfolio__header">
+			<h2>Mes Projets</h2>
+			<div id="portfolio__modifier" class="display">
+				<a href="#" id="ouvrirModale"> <i class="iconModale fa-regular fa-pen-to-square"></i>modifier</a>
+			</div>
+		</div>
+		
+			
+	<!-- Les 2 modales : -->
+  
+	<div id="maModale" class="modale">
+		<!-- Modale 1 : -->
+		<div id="modale1" class="contenu-modale">
+			<!-- Bouton Fermer -->
+			<button id="close-button">
+				<i class="fas fa-times"></i>
+			</button>
+			<!-- Titre -->
+		  	<h3 id="titreModale1" >Galerie photo</h3>
+			<!-- Gallery -->
+		  	<div id="modaleProduct">
+		  	</div>
+			<!-- Séparation -->
+		  	<hr>
+			<!-- Ajouter une photo -->
+		  	<div class="modale1__edit">
+				<button id="ajouterPhoto">Ajouter une photo</button>
+			<!-- Supprimer la galerie -->
+		  	<p><a href="#" id="supprimerGalerie">Supprimer la galerie</a></p>
+		  	</div>
+		</div>
+		<!-- Modale 2 : -->
+		<div id="modale2" class="contenu-modale">
+			<!-- Boutons Retour // Fermer -->
+			<button id="close-button2">
+				<i class="fas fa-times"></i>
+			</button>
+		  <a href="#" id="retour"><i class="fa-solid fa-arrow-left"></i></a>
+		  <!-- Titre -->
+		  <h3 id="titreModale2" >Ajout photo</h3>
+		  <!-- Contenu -->
+		  <div class="modale2__content">
+			<div id="modale2__content__img">
+				<i class="fa-regular fa-image fa-2xl"></i>
+				<button type="button" id="ajouterImg">+ Ajouter photo</button>
+				<p>jpg, png : 4mo max</p>
+			</div>
+			<div id="apercu__content">
+				<img src="./assets/images/abajour-tahina.png" alt="#" id="apercuImg">
+			</div>
+			<div>
+				<form action="#">
+					<input type="file" id="uploadImg" name="uploadImg" accept=".jpg, .png">
+				</form>
+			</div>
+			<form id="form">
+				<div class="form__title" >
+					<label for="title">Titre</label>
+					<input type="text" id="title" name="title" required>
+				</div>
+				<div class="form__category">
+					<label for="category">Catégorie :</label>
+					<select id="category" name="category">
+						<option value="" disabled selected></option>
+					</select>
+				</div>
+			</form>
+		  </div>
+		  <!-- Séparation -->
+		  <hr>
+		  <!-- Valider -->
+		  <button id="valider" class="btn-green">Valider</button>
+		  <p id="errorMessage"></p>
+		</div>
+	  </div>
+  
+  	<!-- Les filtres : -->
+		<div id="filtre">
+			<button  class="btn-filter tous" >Tous</button>
+			<button  class="btn-filter objet" >Objets</button>
+			<button  class="btn-filter appartement" >Appartements</button>
+			<button  class="btn-filter hotel" >Hôtels & restaurants</button>
+		</div>
+	<!-- La gallery : -->
+		<div id="gallery">
+			
+		</div>
+		
+	</section>
+	<!-- Contact : -->
+	<section id="contact">
+		<h2>Contact</h2>
+		<p>Vous avez un projet ? Discutons-en !</p>
+		<form action="#" method="post">
+			<label for="name">Nom</label>
+			<input type="text" name="name" id="name">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email">
+			<label for="message">Message</label>
+			<textarea name="message" id="message" cols="30" rows="10"></textarea>
+			<input type="submit" value="Envoyer">
+		</form>
+	</section>
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+	<nav>
+		<ul>
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
