@@ -286,6 +286,9 @@ article h3{
 	flex-direction: column;
 }
 
+#gallery article{
+	height: 437px;
+}
 /* Contact */
 
 #contact {
