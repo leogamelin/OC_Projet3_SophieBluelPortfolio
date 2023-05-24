@@ -567,6 +567,7 @@ footer nav ul {
 	background-color: #CBD6DC;
 	color: #306685;
 	margin-top: 40px;
+	margin-bottom: 10px;
 	border-radius: 50px;
 	border: none;
 }
@@ -603,8 +604,12 @@ footer nav ul {
 	width: 100%;
 }
 
+.form__title, .form__category{
+	margin-top: 15px;
+}
+
 .form__title label, .form__category label{
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 	font-size: 120%;
 	font-family: 'Work Sans' ;
 }
