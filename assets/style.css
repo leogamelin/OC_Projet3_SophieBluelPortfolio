@@ -392,13 +392,13 @@ footer nav ul {
   #titreModale1{
 	font-size: 160%;
 	text-align: center;
-	margin-top: 30px;
+	margin-top: 40px;
   }
 
 /* Gallery */
 
   #modaleProduct {
-	width: 80%;
+	width: 75%;
 	margin: 40px auto;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
@@ -473,13 +473,14 @@ footer nav ul {
 
   #ajouterPhoto {
 	font-family: 'Work Sans';
-	margin: 20px auto;
-	width: 35%;
+	margin: 30px auto;
+	width: 45%;
 	background-color: #1D6154;
 	color: white;
 	border-radius: 50px;
 	border: none;
-	padding: 8px 40px;
+	padding: 15px 40px;
+	font-size: 115%;
   }
 
   .modale1__edit p{
@@ -489,6 +490,7 @@ footer nav ul {
 /* Supprimer la galerie */
 
   #supprimerGalerie{
+	font-size: 120%;
 	color: #D65353;
 	text-decoration: none;
   }
