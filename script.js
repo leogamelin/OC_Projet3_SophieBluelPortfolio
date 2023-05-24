@@ -180,13 +180,11 @@ let token = window.localStorage.getItem("token") ;
 
 async function afficherTousLesProduitsDansModale() {
   const modaleProduct = document.getElementById("modaleProduct");
-  // Si aucune data n'a été chargée dans la modale, alors on lance la boucle
   if (modaleProduct.getAttribute("data-loaded") === null) {
     const products = await getProducts();
     for (product of products) {
       afficherProductDansModale(product);
     }
-    // On indique que la data a été chargée pour éviter de les re charger à nouveau
     modaleProduct.setAttribute("data-loaded", "true");
   }
 }
@@ -208,7 +206,7 @@ function afficherProductDansModale(product) {
   const trashButton = productElement.querySelector('.icon-trash');
 
   // Ajouter l'élément HTML au DOM
-
+  document.getElementById("modaleProduct").appendChild(productElement);
 
   // Gérer la suppression de l'article
   trashButton.addEventListener("click", function () {
@@ -267,7 +265,7 @@ async function productCategories() {
 // Appel de la fonction
 productCategories();
 
-// Permet au bouton de prendre la fonction d'un input file
+// Permet à un bouton customisé de prendre la fonction d'un input file
 document.querySelector('#ajouterImg').onclick = function() {
     document.getElementById('uploadImg').click();
 };
@@ -292,8 +290,8 @@ document.getElementById('uploadImg').onchange = function(event) {
     document.querySelector('#apercu__content').style.display = 'flex'
 };
 
-    // Valide le formulaire d'ajout et crée donc une nouvelle instance dans la database
-    document.querySelector('#valider').onclick = function() {
+// Valide le formulaire d'ajout et crée donc une nouvelle instance dans la database
+document.querySelector('#valider').onclick = function() {
     const title = document.querySelector('#title').value;
     const image = document.querySelector('#uploadImg').files[0];
     const categoryElements = document.querySelector('#category').value.split(',');
@@ -316,8 +314,8 @@ document.getElementById('uploadImg').onchange = function(event) {
     .then(function(response) {
         if (response.ok) {
             alert("Nouveau projet ajouté avec succès !");
-            afficherProduct(product);
-            afficherTousLesProduitsDansModale();
+            afficherProduct(works);
+            afficherTousLesProduitsDansModale()
         } else {
             alert("Erreur lors de la lecture des informations.")
         }
@@ -335,7 +333,7 @@ function checkForm() {
   if (title.value && image.files.length > 0 && categoryElements.value !== "") {
     submitButton.style.backgroundColor = '#1D6154';
   };
-};
+}
 
 
 title.addEventListener('input', checkForm);

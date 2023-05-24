@@ -406,6 +406,7 @@ footer nav ul {
   }
   
   .modale-product {
+	height: 115px;
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 12px;
@@ -545,7 +546,7 @@ footer nav ul {
 	height: 170px;
 	width: 100%;
 	background-color: #E8F1F6;
-	border-radius: 2px;
+	border-radius: 3px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
